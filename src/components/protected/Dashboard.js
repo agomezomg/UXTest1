@@ -65,7 +65,7 @@ class Dashboard extends Component {
 
   regPost(e){
     e.preventDefault()
-    if (e.target.tema.value == "" || e.target.mensaje.value == "") {
+    if (e.target.tema.value === "" || e.target.mensaje.value === "") {
       alert("Can't add with blank fields!")
     } else {
       db.ref('posts/').push({

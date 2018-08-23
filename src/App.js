@@ -7,12 +7,14 @@ import Register from './components/Register';
 import Home from './components/Home';
 import Dashboard from './components/protected/Dashboard';
 import { logout, saveUser } from './helpers/auth';
-import {db, firebaseAuth } from './config/constants';
+import { firebaseAuth } from './config/constants';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import { Toolbar, Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+
+const logged = false;
 
 const styles = {
   root: {
@@ -97,6 +99,7 @@ class App extends Component {
         label="Logout"
         onClick={() => {
           logout();
+          
         }}
         style={{ color: '#fff' }}
       >Logout</Button>
